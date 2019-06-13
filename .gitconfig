@@ -1,0 +1,26 @@
+[user]
+	name = Kevin Picart
+	email = kevin.picart.ext@c-s.fr
+[color]
+        ui = true
+[alias]
+        co = checkout
+        br = branch
+        ci = commit
+        st = status
+        unstage = reset HEAD
+        last = log -1 HEAD
+        amend = commit --amend --no-edit
+
+        # log sur une ligne
+        l = log --author-date-order --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+        # log sur une ligne avec toutes les branches
+        la = log --author-date-order --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset' --all -n 30
+        laa = log --author-date-order --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset' --all
+        # log detaillé
+        ll = log --stat --abbrev-commit
+        d = diff
+[credential]
+        helper = store
+[push]
+        default = simple
